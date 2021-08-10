@@ -58,7 +58,11 @@ let g:go_highlight_operators = 1
 
 let g:deoplete#enable_at_startup = 1
 
-vnoremap <C-C> :w !xclip -i -sel c<CR><CR>
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+
+xnoremap p pgvy
 
 nmap <F8> :TagbarToggle<CR>
 syntax enable
