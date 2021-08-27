@@ -23,6 +23,11 @@ Plug 'majutsushi/tagbar'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" cpp
+
+Plug 'xavierd/clang_complete' 
+
 call plug#end()
 colorscheme dracula
 
@@ -57,6 +62,11 @@ let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 
 let g:deoplete#enable_at_startup = 1
+
+" cpp
+
+let g:clang_library_path='/usr/lib/llvm-10/lib/libclang.so.1'
+let g:clang_jumpto_declaration_key = 'gd'
 
 vmap <C-c> "+yi
 vmap <C-x> "+c
